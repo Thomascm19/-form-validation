@@ -6,7 +6,72 @@
 	<link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+<h1 id="inicioFormulario" class="row titulos">
+<hr>
+Validacion Formulario
+<hr>
+ </h1>
 
+ <div id="formulario" class="row">
+ 	
+	<form method="post">
+			
+		<h1>Ingrese sus datos</h1>
+
+		<label for="nombre">Ingrese su usuario</label>
+		<input id="nombre" type="text" placeholder="Escriba su usuario con minimo 2 caracteres, maximo 6 caracteres">
+
+		<label for="password">Ingrese su contraseña</label>
+		<input id="nombre" type="password" placeholder="Escriba su contraseña con minimo 8 caracteres y debe incluir letras en mayuscula, en minuscula y numeros">
+
+		<label for="email">Ingrese su correo electronico</label>
+		<input id="email" type="text" placeholder="Escriba su correo electronico">
+
+		<label for="color">Elija su color</label>
+		<select id="color">
+			<option>Seleccione</option>
+			<option>Amarillo</option>
+			<option>Rojo</option>
+			<option>Azul</option>
+		</select>
+
+		<br>
+
+		<hr>
+
+		<p>Seleccione Animal:</p>
+		<input type="checkbox" id="perro">
+		<label for="perro">Perro</label>
+		<input type="checkbox" id="gato">
+		<label for="gato">Gato</label>
+		<input type="checkbox" id="conejo">
+		<label for="conejo">Conejo</label>
+
+		<hr>
+
+		<p>Seleccione forma de pago:</p>
+		<input type="radio" id="efectivo">
+		<label for="efectivo">Efectivo</label>
+		<input type="radio" id="credito">
+		<label for="credito">Credito</label>
+		
+		<br>
+
+		<hr>
+
+		<label for="mensaje"></label>
+		<textarea id="mensaje" rows="10" required></textarea>
+
+		<input type="checkbox" id="terminos">
+		<label for="terminos"><a href="README.md" target="README.md">Acepto terminos y condiciones</a></label>
+
+		<input type="submit" value="enviar">
+	</form>
+
+
+
+
+ </div>
 
 
 
