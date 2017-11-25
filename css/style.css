@@ -14,11 +14,24 @@
 	font-size: 20px;
 	color:white;
 }
-#formulario input, #formulario label, #formulario textarea, #formulario p,#formulario select{
+#formulario input, #formulario label, #formulario textarea, #formulario p, #formulario select{
 	display: block;
 	position: relative;
 	width: 100%;
 	padding: 10px;
 	font-size: 14px;
 
+}
+
+#formulario input[type="checkbox"],#formulario input[type="radio"]{
+    display: none;
+}
+
+#formulario label.box span,#formulario label.radio span{
+    display:inline-block;
+    width: 25px;
+    height: 25px;
+    background: red;
+    vertical-align: middle;
+    margin-right: 10px;
 }

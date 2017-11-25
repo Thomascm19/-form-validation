@@ -44,19 +44,19 @@ Validacion Formulario
 
 		<p>Seleccione Animal:</p>
 		<input type="checkbox" id="perro">
-		<label for="perro">Perro</label>
+		<label for="perro" class="box"><span></span>Perro</label>
 		<input type="checkbox" id="gato">
-		<label for="gato">Gato</label>
+		<label for="gato" class="box"><span></span>Gato</label>
 		<input type="checkbox" id="conejo">
-		<label for="conejo">Conejo</label>
+		<label for="conejo" class="box"><span></span>Conejo</label>
 
 		<hr>
 
 		<p>Seleccione forma de pago:</p>
-		<input type="radio" id="efectivo">
-		<label for="efectivo">Efectivo</label>
-		<input type="radio" id="credito">
-		<label for="credito">Credito</label>
+		<input type="radio" id="efectivo" name="pago" checked>
+		<label for="efectivo" class="radio"><span></span>Efectivo</label>
+		<input type="radio" id="credito" name="pago">
+		<label for="credito" class="radio"><span></span>Credito</label>
 		
 		<br>
 
@@ -66,7 +66,7 @@ Validacion Formulario
 		<textarea id="mensaje" rows="10" required></textarea>
 
 		<input type="checkbox" id="terminos">
-		<label for="terminos"><a href="README.md" target="README.md">Acepto terminos y condiciones</a></label>
+		<label for="terminos" class="box"><span></span><a href="README.md" target="README.md">Acepto terminos y condiciones</a></label>
 
 		<input type="submit" value="Enviar">
 	</form>
