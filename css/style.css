@@ -38,6 +38,11 @@
 #formulario label.radio span{
      border-radius: 100%;
 }
+
 #formulario input[type="checkbox"]:checked + label.box span{
     background: url(../img/box.jpg);
+}
+
+#formulario input[type="radio"]:checked + label.radio span{
+    background: url(../img/radio.jpg);
 }
