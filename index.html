@@ -1,83 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<title>Forms</title>
-	 <link rel="stylesheet" href="libs/bootstrap-3.3.7-dist/css/bootstrap.min.css">
-	<link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <title>Forms</title>
+    <link rel="stylesheet" href="libs/bootstrap-3.3.7-dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-<h1 id="inicioFormulario" class="row titulos">
-<center>
-<hr>
-Validacion Formulario
-<hr>
-</center>
- </h1>
+    <h1 id="inicioFormulario" class="row titulos">
+        <center>
+            <hr> Validacion Formulario
+            <hr>
+        </center>
+    </h1>
 
- <div id="formulario" class="row">
- 	
-	<form method="post">
-			
-		<h1>Ingrese sus datos</h1>
+    <div id="formulario" class="row">
 
-		<label for="nombre">Ingrese su usuario <span class="obligatorio">*Campo obligatorio</span></label>
-		<input id="nombre" class= "validar"  type="text" placeholder="Escriba su usuario con minimo 2 caracteres, maximo 6 caracteres">
+        <form method="post">
 
-		<label for="password">Ingrese su contraseña <span class="obligatorio">*Campo obligatorio</span></label>
-		<input id="nombre" class= "validar"  type="password" placeholder="Escriba su contraseña con minimo 8 caracteres y debe incluir letras en mayuscula, en minuscula y numeros">
+            <h1>Ingrese sus datos</h1>
 
-		<label for="email">Ingrese su correo electronico <span class="obligatorio">*Campo obligatorio</span></label>
-		<input id="email" class= "validar" type="text" placeholder="Escriba su correo electronico">
+            <label for="nombre">Ingrese su usuario <span class="obligatorio">*Campo obligatorio</span></label>
+            <input id="nombre" class="validar" type="text" placeholder="Escriba su usuario con minimo 2 caracteres, maximo 6 caracteres">
 
-		<label for="color">Elija su color</label>
-		<select id="color">
+            <label for="password">Ingrese su contraseña <span class="obligatorio">*Campo obligatorio</span></label>
+            <input id="nombre" class="validar" type="password" placeholder="Escriba su contraseña con minimo 8 caracteres y debe incluir letras en mayuscula, en minuscula y numeros">
+
+            <label for="email">Ingrese su correo electronico <span class="obligatorio">*Campo obligatorio</span></label>
+            <input id="email" class="validar" type="text" placeholder="Escriba su correo electronico">
+
+            <label for="color">Elija su color</label>
+            <select id="color">
 			<option>Seleccione</option>
 			<option>Amarillo</option>
 			<option>Rojo</option>
 			<option>Azul</option>
 		</select>
 
-		<br>
+            <br>
 
-		<hr>
+            <hr>
 
-		<p>Seleccione Animal:</p>
-		<input type="checkbox" id="perro">
-		<label for="perro" class="box"><span></span>Perro</label>
-		<input type="checkbox" id="gato">
-		<label for="gato" class="box"><span></span>Gato</label>
-		<input type="checkbox" id="conejo">
-		<label for="conejo" class="box"><span></span>Conejo</label>
+            <p>Seleccione Animal:</p>
+            <input type="checkbox" id="perro">
+            <label for="perro" class="box"><span></span>Perro</label>
+            <input type="checkbox" id="gato">
+            <label for="gato" class="box"><span></span>Gato</label>
+            <input type="checkbox" id="conejo">
+            <label for="conejo" class="box"><span></span>Conejo</label>
 
-		<hr>
+            <hr>
 
-		<p>Seleccione forma de pago:</p>
-		<input type="radio" id="efectivo" name="pago" checked>
-		<label for="efectivo" class="radio"><span></span>Efectivo</label>
-		<input type="radio" id="credito" name="pago">
-		<label for="credito" class="radio"><span></span>Credito</label>
-		
-		<br>
+            <p>Seleccione forma de pago:</p>
+            <input type="radio" id="efectivo" name="pago" checked>
+            <label for="efectivo" class="radio"><span></span>Efectivo</label>
+            <input type="radio" id="credito" name="pago">
+            <label for="credito" class="radio"><span></span>Credito</label>
 
-		<hr>
+            <br>
 
-		<label for="mensaje"></label>
-		<textarea id="mensaje" rows="10" required></textarea>
+            <hr>
 
-		<input type="checkbox" id="terminos">
-		<label for="terminos" class="box"><span></span><a href="README.md" target="README.md">Acepto terminos y condiciones</a></label>
+            <label for="mensaje"></label>
+            <textarea id="mensaje" rows="10" required></textarea>
 
-		<input type="submit" value="Enviar">
-	</form>
+            <input type="checkbox" id="terminos">
+            <label for="terminos" class="box"><span></span><a href="README.md" target="README.md">Acepto terminos y condiciones</a></label>
 
-
+            <input type="submit" value="Enviar">
+        </form>
 
 
- </div>
 
 
-<script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
-<script src="js/main.js"></script>	
+    </div>
+
+
+    <script src="libs/bootstrap-3.3.7-dist/js/bootstrap.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>
