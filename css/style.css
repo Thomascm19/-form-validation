@@ -22,6 +22,10 @@
 	font-size: 14px;
 
 }
+#formulario label span.obligatorio{
+    opacity: 1;
+    color:#777;
+}
 
 #formulario input[type="checkbox"],#formulario input[type="radio"]{
     display: none;

@@ -4,8 +4,8 @@ El objeto con las propiedades del formulario
 
 var p = {
 
-    entradas: document.querySelector("input.validar")
-
+    entradas: document.querySelector("input.validar"),
+    valor: null
 
 }
 
@@ -22,7 +22,15 @@ var m = {
         }
     },
     enFoco: function(input){
+        p.valor = input.target.value;
         
+        if (p.valor == ""){
+            
+            document.querySelector("#"input.target.id)= "rgba(255,255,0,0.5)"
+            
+            document.querySelector("[for="+input.target.id+"].obligatorio").style.opacity = 1;
+            
+        }
     }
 }
 
