@@ -63,7 +63,7 @@ var m = {
 
     		if(p.valor.length < 2 || p.valor.length > 6){
 
-    			document.querySelector("[for=" + input.target.id + "] .error").innerHTML = '<span style="color:red">"Error al ingresar los datos: '+input.target.placeholder+'</span>';
+    			document.querySelector("[for="+input.target.id+"] .error").innerHTML = '<span style="color:red">*Error al ingresar los datos: '+input.target.placeholder+'</span>';
     		}else{
     			document.querySelector("[for=" + input.target.id + "] .error").parentNode.removeChild(document.querySelector("[for=" + input.target.id + "] .error"));
     		}
@@ -72,17 +72,17 @@ var m = {
 
     		case "password":
 
-    		p.expresionRegular = /^([a-zA-Z0-9@*#]{8,15})$/
+    		p.expresionRegular = /^([a-zA-Z0-9@*#]{8,15})$/;
 
     		if(!p.expresionRegular.test(p.valor)){
 
-				document.querySelector("[for=" + input.target.id + "] .error").innerHTML = '<span style="color:red">"Error al ingresar los datos: '+input.target.placeholder+'</span>';
+				document.querySelector("[for="+input.target.id+"] .error").innerHTML = '<span style="color:red">*Error al ingresar los datos: '+input.target.placeholder+'</span>';
 
-				p.validarPassword = false;
+				
 			}else{
-				document.querySelector("[for=" + input.target.id + "] .error").parentNode.removeChild(document.querySelector("[for=" + input.target.id + "] .error"));
+				document.querySelector("[for="+input.target.id+"] .error").parentNode.removeChild(document.querySelector("[for="+input.target.id+"] .error"))
 
-				p.validarPassword = true;
+				
 			}
 
 
@@ -90,9 +90,10 @@ var m = {
 
     		case "email":
 
-    		p.expresionRegular = /^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$/
+    		p.expresionRegular = /^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$/;
 
     		if(!p.expresionRegular.test(p.valor)){
+    			
 				document.querySelector("[for=" + input.target.id + "] .error").innerHTML = '<span style="color:red">"Error al ingresar los datos: '+input.target.placeholder+'</span>';
     		}else{
 				document.querySelector("[for=" + input.target.id + "] .error").parentNode.removeChild(document.querySelector("[for=" + input.target.id + "] .error"));
