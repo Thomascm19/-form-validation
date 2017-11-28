@@ -35,7 +35,7 @@ var m = {
 
             document.querySelector("#" + input.target.id).style.background = "rgba(255,255,0,.5)";
 
-            document.querySelector("[for=" + input.target.id + "] .obligatorio").style.opacity = 1;
+            document.querySelector("[for=" + input.target.id + "] .obligatorio").style.opacity = 0;
 
         }
 
@@ -44,7 +44,7 @@ var m = {
         
         document.querySelector("#" + input.target.id).style.background = "white";
 
-            document.querySelector("[for=" + input.target.id + "] .obligatorio").style.opacity = 0;
+            document.querySelector("[for=" + input.target.id + "] .obligatorio").style.opacity = 1;
     }
 
 }
