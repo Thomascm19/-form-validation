@@ -6,7 +6,12 @@ var p = {
 
     entradas: document.querySelectorAll("input.validar"),
     valor: null,
-    expresionRegular: null
+    expresionRegular: null,
+    validarUsuario: false,
+    validarPassword: false,
+    validarEmail: false,
+    validarTerminos: null
+
 
 }
 
@@ -64,8 +69,12 @@ var m = {
     		if(p.valor.length < 2 || p.valor.length > 6){
 
     			document.querySelector("[for="+input.target.id+"] .error").innerHTML = '<span style="color:red">*Error al ingresar los datos: '+input.target.placeholder+'</span>';
+
+    			p.validarUsuario = false;
     		}else{
     			document.querySelector("[for=" + input.target.id + "] .error").parentNode.removeChild(document.querySelector("[for=" + input.target.id + "] .error"));
+    		
+    		p.validarUsuario = true;
     		}
 
     		break; 
@@ -78,11 +87,12 @@ var m = {
 
 				document.querySelector("[for="+input.target.id+"] .error").innerHTML = '<span style="color:red">*Error al ingresar los datos: '+input.target.placeholder+'</span>';
 
+					p.validarPassword = false;
 				
 			}else{
 				document.querySelector("[for="+input.target.id+"] .error").parentNode.removeChild(document.querySelector("[for="+input.target.id+"] .error"))
 
-				
+				p.validarPassword = true;
 			}
 
 
@@ -93,18 +103,60 @@ var m = {
     		p.expresionRegular = /^([0-9a-zA-Z]([-.\w]*[0-9a-zA-Z])*@([0-9a-zA-Z][-\w]*[0-9a-zA-Z]\.)+[a-zA-Z]{2,9})$/;
 
     		if(!p.expresionRegular.test(p.valor)){
-    			
+
 				document.querySelector("[for=" + input.target.id + "] .error").innerHTML = '<span style="color:red">"Error al ingresar los datos: '+input.target.placeholder+'</span>';
-    		}else{
+
+				p.validarEmail = false;
+    		
+			}else{
+
+
 				document.querySelector("[for=" + input.target.id + "] .error").parentNode.removeChild(document.querySelector("[for=" + input.target.id + "] .error"));
+
+				p.validarEmail = true;
     		}
 
 
 
     		break; 
     	}
-    }
-}
+
+
+    	}else{
+
+    	document.querySelector("[for="+input.target.id+"] .error").parentNode.removeChild(document.querySelector("[for="+input.target.id+"] .error"))
+    	}
+    	
+	},
+ 	 validarFormulario: function(){
+
+
+ 	 	p.validarTerminos = document.querySelector("#terminos").checked;
+
+
+ 	 	if(!p.validarUsuario || !p.validarFormulario || !p.validarPassword){
+ 	 		
+
+ 	 		document,querySelector("#labelEnviar").innerHTML = '<span style="color:red">Tiene errores en los campos ingresados, revise por favor </span>';
+
+
+ 	 		return false;
+
+ 	 		
+ 	 	}else if (!p.validarTerminos){
+
+			document,querySelector("#labelEnviar").innerHTML = '<span style="color:red">Debe de Aceptar Terminos y Condiciones</span>';
+ 	 		return false;
+
+ 	 		
+ 	 	}else {
+
+
+ 	 		return true;
+ 	 	}
+ 	 	
+
+  }
 }
 
 m.inicioFormulario();

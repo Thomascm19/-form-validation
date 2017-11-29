@@ -16,9 +16,9 @@
         </center>
     </h1>
 
-    <div id="formulario" class="row">
+    <div id="formulario" action="Formulario.php" class="row">
 
-        <form method="post">
+        <form method="post" onsubmit="return m.validarFormulario()">
 
             <h1>Ingrese sus datos</h1>
 
@@ -71,6 +71,8 @@
             <input type="checkbox" id="terminos">
             <label for="terminos" class="box"><span></span><a href="README.md" target="README.md">Acepto terminos y condiciones</a></label>
 
+
+			<label id="labelEnviar"></label>			
             <input type="submit" value="Enviar">
         </form>
 
