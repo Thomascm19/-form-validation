@@ -134,10 +134,10 @@ var m = {
  	 	p.validarTerminos = document.querySelector("#terminos").checked;
 
 
- 	 	if(!p.validarUsuario || !p.validarFormulario || !p.validarPassword){
+ 	 	if(!p.validarUsuario || !p.validarEmail || !p.validarPassword){
  	 		
 
- 	 		document,querySelector("#labelEnviar").innerHTML = '<span style="color:red">Tiene errores en los campos ingresados, revise por favor </span>';
+ 	 		document.querySelector("#labelEnviar").innerHTML = '<span style="color:red">Tiene errores en los campos ingresados, revise por favor </span>';
 
 
  	 		return false;
@@ -145,7 +145,8 @@ var m = {
  	 		
  	 	}else if (!p.validarTerminos){
 
-			document,querySelector("#labelEnviar").innerHTML = '<span style="color:red">Debe de Aceptar Terminos y Condiciones</span>';
+			document.querySelector("#labelEnviar").innerHTML = '<span style="color:red">Debe de Aceptar Terminos y Condiciones</span>';
+
  	 		return false;
 
  	 		
